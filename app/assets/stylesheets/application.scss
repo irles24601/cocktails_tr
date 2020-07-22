@@ -10,6 +10,29 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+ @import "bootstrap";
+
+.top-text {
+  text-align: center;
+}
+
+ /* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #343a40;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  line-height: 60px;
+}
+/* -------------------------------------------------- */
+
