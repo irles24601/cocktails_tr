@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h2><a class="navbar-brand" href="/">Cocktails & Mocktails</a></h2>
+    </nav>
+  </header>
 
   <body>
     <%= yield %>
@@ -15,7 +21,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p>crated by t.isawa</p>
+    <p>created by t.isawa</p>
   </div>
 </footer>
 

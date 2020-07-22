@@ -14,8 +14,24 @@
 
  @import "bootstrap";
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .top-text {
   text-align: center;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1587780086212-62afb37785e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 42%;
+}
+
+.top-right-content {
+  margin-top: 10px;
 }
 
  /* Sticky footer styles
