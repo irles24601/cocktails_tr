@@ -3,7 +3,16 @@
     <h2 class="head-text">Cocktails</h2>
     <div class="row">
       <div class="card col-sm shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
-        <img src="https://images.unsplash.com/flagged/photo-1575451533010-a35916b8a8bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" class="card-img-top">
+        <a class="js-modal-open" href="">
+          <img src="https://images.unsplash.com/flagged/photo-1575451533010-a35916b8a8bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" class="card-img-top">
+        </a>
+        <div class="modal js-modal">
+          <div class="modal__bg js-modal-close"></div>
+          <div class="modal__content">
+            <p>cocktail material</p>
+            <a class="js-modal-close" href="">close</a>
+          </div><!-- modal__inner -->
+        </div><!-- modal -->
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
