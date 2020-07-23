@@ -7,11 +7,53 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <h2><a class="navbar-brand" href="/">Cocktails & Mocktails</a></h2>
+      <a class="navbar-brand" href="#">Cocktails & Mocktails</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-home"> Home </i> <span class="sr-only">(current)</span></a>
+          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <a class="nav-link"><%= link_to " MyPage ", users_show_path(current_user.id)%></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><%= link_to " logout ", destroy_user_session_path, class: "glyphicon glyphicon-log-out logout", method: :delete %></a>
+            </li>    
+          <% else %>
+            <li class="nav-item">
+              <i class="fas fa-user-plus nav-link"><%= link_to " sign up ", new_user_registration_path%></i>
+            </li>
+            <li class="nav-item">
+              <i class="fas fa-sign-in-alt nav-link"><%= link_to " login ", user_session_path%></i>
+            </li>
+          <% end %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
     </nav>
   </header>
 
