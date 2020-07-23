@@ -14,6 +14,12 @@
 
  @import "bootstrap";
 
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -31,9 +37,23 @@
   height: 700px;
 }
 
-
 .top-right-content {
   margin-top: 40px;
+}
+
+.card-img-top {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card {
+  margin: 0 5px 0 5px;
+}
+
+.head-text {
+  font-family: 'Montserrat Subrayada', sans-serif;
 }
 
  /* Sticky footer styles
@@ -54,3 +74,23 @@
 }
 /* -------------------------------------------------- */
 
+#page_top{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f139';
+  font-size: 50px;
+  color: #3fefee;
+}
