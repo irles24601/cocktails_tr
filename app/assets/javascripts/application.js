@@ -55,3 +55,11 @@ $(function(){
       return false;
   });
 });
+
+jQuery(function($){  
+  $('.content').masonry({
+    itemSelector: '.card',
+    columnWidth: 180, 
+    isFitWidth: true  //親要素の幅に合わせてカラム数を自動調整
+  });  
+});
