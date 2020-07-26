@@ -1,17 +1,17 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'top' %>
+<% end %>
+
 <main class="frame">
   <div class="container row">
-    <div class="col">
-    </div>
-    <div class="col top-right-content">
-      <h1>
+    <div class="top-content col-5">
+      <h1 class="top-header logo">
         Welcome to <br>
-        Cocktails & Mocktails
+        Cocktails Recipe
       </h1>
-      <p class="top-text">
-        Thirsty? We have hundreds and hundreds of delicious cocktail recipes from expert bartenders around the world. No matter if you're looking for a classic cocktail, a punch for a party or an original concoction, we have a cocktail recipe for every taste and occasion, just a shake, stir or pour away.
-      </p>
+
       <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/cocktails'">Cocktails</button>
-      <p  class="top-text text-muted">or</p>
+      <p  class="top-text">or</p>
       <button type="button" class="btn btn-success btn-lg btn-block" onclick="location.href='/cocktails'">Mocktails</button>
       <br>
       <p class="top-text">
