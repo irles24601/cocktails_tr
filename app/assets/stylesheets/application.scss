@@ -14,9 +14,10 @@
 
  @import "bootstrap";
 
- main {
-   position: relative;
- }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 //  ローディング画面
 .loader-wrap {
@@ -165,9 +166,9 @@
 }
 // --------------------------------
 
-body {
-  padding-top: 50px;
-  position: relative;
+nav {
+  background-color: #fff;
+  opacity: 0.5;
 }
 
 .container {
@@ -175,20 +176,22 @@ body {
   margin: 0 auto;
 }
 
+.top-content {
+  padding-top: 150px;
+}
+
+.top-header {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
 .top-text {
   text-align: center;
-}
-
-.frame {
-  background-image: url("https://images.unsplash.com/photo-1587780086212-62afb37785e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80");
-  background-position: left 0px bottom 50px;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  height: 700px;
-}
-
-.top-right-content {
-  margin-top: 40px;
+  color: white;
 }
 
 .modal{
@@ -233,28 +236,6 @@ body {
   position: absolute;
   left : 1em;/*左端からのアイコンまでの距離*/
   color: skyblue;/*アイコン色*/
-}
-
-
-#page_top{
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  opacity: 0.6;
-}
-#page_top a{
-  width: 60px;
-  height: 60px;
-  text-decoration: none;
-}
-#page_top a::before{
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f139';
-  font-size: 50px;
-  color: #3fefee;
 }
 
 
