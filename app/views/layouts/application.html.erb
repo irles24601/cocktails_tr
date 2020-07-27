@@ -13,6 +13,13 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <link rel="icon" href="../../assets/images/cocktail_icon.ico" type="image/svg+xml">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <%= stylesheet_link_tag "material-kit", :media => "all" %>
+
     <%= yield :css %>
 
   </head>
@@ -59,9 +66,11 @@
             </div>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline ml-auto">
           <input class="form-control mr-sm-2" type="search" placeholder="Base spirit" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-white btn-raised btn-fab btn-round" type="submit">
+            <i class="material-icons">search</i>
+          </button>
         </form>
       </div>
     </nav>
