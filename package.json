@@ -1,5 +1,7 @@
 {
   "name": "cocktails",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "material-kit": "^2.0.4"
+  }
 }
