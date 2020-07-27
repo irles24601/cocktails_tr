@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Cocktails & Mocktails</title>
+    <title>Cocktails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.6.4/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
-    <link rel="icon" href="../assets/images/cocktail_icon.ico" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/cocktail_icon.ico" type="image/svg+xml">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= yield :css %>
 
@@ -30,10 +31,10 @@
           </li>
           <% if user_signed_in? %>
             <li class="nav-item">
-              <a class="nav-link"><%= link_to " MyPage ", users_show_path(current_user.id)%></a>
+              <%= link_to " MyPage ", users_show_path(current_user.id), class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <a class="nav-link"><%= link_to " logout ", destroy_user_session_path, class: "glyphicon glyphicon-log-out logout", method: :delete %></a>
+              <%= link_to " logout ", destroy_user_session_path, class: "nav-link", method: :delete %>
             </li>    
           <% else %>
             <li class="nav-item">

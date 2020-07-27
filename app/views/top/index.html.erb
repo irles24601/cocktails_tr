@@ -4,19 +4,21 @@
 
 <main class="frame">
   <div class="container row">
-    <div class="top-content col-5">
-      <h1 class="top-header logo">
-        Welcome to <br>
-        Cocktails Recipe
+    <div class="top-content col-md-5">
+      <h1 class="top-header">
+        Whisky<br>
+        Wine<br>
+        Jin<br>
+        Rum<br>
+        Beer<br>
+        Vodka<br>
+        Tequira<br>
+        Liqueur<br>
       </h1>
-
-      <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="location.href='/cocktails'">Cocktails</button>
-      <p  class="top-text">or</p>
-      <button type="button" class="btn btn-success btn-lg btn-block" onclick="location.href='/cocktails'">Mocktails</button>
-      <br>
-      <p class="top-text">
-        Drinking less than 20 is prohibited by law.
-      </p>
+    </div>
+    <div class="top-content col-md-5 go-to-recipe">
+      <!-- <a class="btn-shine" href="/cocktails">Go to Recipe</a> -->
+      <%= link_to "Go to Recipe", cocktails_path, class: "btn-shine" %>
     </div>
   </div>
 </main>
