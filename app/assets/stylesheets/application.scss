@@ -171,12 +171,9 @@ nav {
   opacity: 0.5;
 }
 
-.container {
-  margin: 0 auto;
-}
-
 .top-content {
   padding-top: 100px;
+  margin: 0 auto;
 }
 
 .top-header {
@@ -188,6 +185,15 @@ nav {
 
 .go-to-recipe {
   margin: auto 0;
+}
+
+.section-signup {
+  background-image: image-url('bar.jpeg');
+  background: linear-gradient( 135deg, rgba(250, 255, 250, 0.433), rgba(54, 54, 54, 0.486)), image-url('bar.jpeg');
+}
+
+section {
+  margin-top: -90px;
 }
 
 .btn-shine {

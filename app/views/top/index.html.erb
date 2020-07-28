@@ -2,8 +2,8 @@
   <%= stylesheet_link_tag 'top' %>
 <% end %>
 
-<main class="frame">
-  <div class="container row">
+<div class="container">
+  <div class="row">
     <div class="top-content col-md-6">
       <h1 class="top-header">
         Whisky<br>
@@ -16,9 +16,8 @@
         Liqueur<br>
       </h1>
     </div>
-    <div class="top-content col-md-5 go-to-recipe">
-      <!-- <a class="btn-shine" href="/cocktails">Go to Recipe</a> -->
+    <div class="top-content col-md-6 go-to-recipe">
       <%= link_to "Go to Recipe", cocktails_path, class: "btn-shine" %>
     </div>
   </div>
-</main>
+</div>

@@ -1,38 +1,64 @@
-<section class="slice slice-lg sct-color-1">
-    <div class="container row">
-        <div class="col-md-4 offset-md-4">
+<section>
+    <div class="section section-signup page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 mx-auto">
+                    <div class="card card-login">
+                        <div class="form">
 
-            <div class="form-user style-1 rounded has-shadow-1">
-                <div class="form-header text-center">
-                    <h2 class="form-header-title">ユーザー登録</h2>
-                </div>
-                <div class="form-body">
+                            <div class="card-header card-header-primary text-center">
+                                <h4 class="card-title">Sign Up</h4>
+                            </div>
 
-                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                    <%= render "devise/shared/error_messages", resource: resource %>
-                    <div class="form-group has-icon">
-                        <label class="control-label sr-only" for="inputName">Name</label>
-                        <%= f.text_field :name, autofocus: true, class:"form-control", id:"inputName", placeholder:"名前"%>
-                        <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
-                    </div>
-                    <div class="form-group has-icon">
-                        <label class="control-label sr-only" for="inputEmail">Email</label>
-                        <%= f.email_field :email, class:"form-control", id:"inputEmail", placeholder:"メールアドレス"%>
-                        <span class="fa fa-envelope form-control-icon" aria-hidden="true"></span>
-                    </div>
-                    <div class="form-group has-icon">
-                        <label class="control-label sr-only" for="inputPassword">Password</label>
-                        <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder:"パスワード" %>
-                        <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
-                    </div>
-                    <div class="form-group has-icon">
-                        <label class="control-label sr-only" for="inputConfirmPassword">Password</label>
-                        <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", id:"inputConfirmPassword", placeholder:"パスワード確認" %>
-                        <span class="fa fa-check-circle-o form-control-icon" aria-hidden="true"></span>
-                    </div>
-                    <%= f.submit "新規登録", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
-                  <% end %>
+                            <div class="card-body">
+                                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                                    <%= render "devise/shared/error_messages", resource: resource %>
 
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                        </div>
+                                        <%= f.text_field :name, autofocus: true, class:"form-control", id:"inputName", placeholder:"Name"%>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">mail</i>
+                                        </span>
+                                        </div>
+                                        <%= f.email_field :email, autofocus: true, type:"email", class:"form-control", id:"inputEmail", placeholder:"Email"%>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock_outline</i>
+                                        </span>
+                                        </div>
+                                        <%= f.password_field :password, autocomplete: "off", type:"password", class:"form-control", id:"inputPassword", placeholder:"Password" %>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">check_circle_outline</i>
+                                        </span>
+                                        </div>
+                                        <%= f.password_field :password_confirmation, autocomplete: "off", type:"password", class:"form-control", id:"inputConfirmPassword", placeholder:"Password confirmation" %>
+                                    </div>
+
+                                    <div class="footer text-center">
+                                        <%= f.submit "registration", class:"btn btn-primary btn-link btn-wd btn-lg" %>
+                                    </div>
+                                
+                                <% end %>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
