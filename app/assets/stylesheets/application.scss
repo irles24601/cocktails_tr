@@ -167,7 +167,7 @@
 // --------------------------------
 
 nav {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.027);
   opacity: 0.5;
 }
 
@@ -188,12 +188,17 @@ nav {
 }
 
 .section-signup {
-  background-image: image-url('bar.jpeg');
   background: linear-gradient( 135deg, rgba(250, 255, 250, 0.433), rgba(54, 54, 54, 0.486)), image-url('bar.jpeg');
 }
 
 section {
   margin-top: -90px;
+}
+
+.my-page {
+  background: linear-gradient( 135deg, rgba(250, 255, 250, 0.433), rgba(54, 54, 54, 0.486)), image-url('mojito.jpeg');
+  background-position: right;
+  background-size: 40% auto;
 }
 
 .btn-shine {

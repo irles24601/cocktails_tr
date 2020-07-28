@@ -1,0 +1,33 @@
+
+<section>
+  <div class="top-header">
+    <div class="cocktail-meta-top">
+      <div class="cocktail-image">
+        <%= attachment_image_tag @cocktail, :image %>
+      </div>
+    </div>
+    <div class="cocktail-content">
+      <h2 class="cocktail-title"><%= @cocktail.cocktail_name %></h2>
+      <ul class="meta-info-cells v4 float-wrapper">
+        <li>
+          <i class="fa fa-user"></i>By<a href="#">
+            <%= @cocktail.user.name %></a>
+        </li>
+        <li>
+          <i class="fa fa-calendar"></i><%= @cocktail.created_at.strftime('%Y/%m/%d') %>
+        </li>
+        <li>
+          <i class="fa fa-heart"></i>
+          <a href="#">202 いいね</a>
+        </li>
+        <li>
+          <i class="fa fa-comment"></i>
+          <a href="#comments">4</a>
+        </li>
+      </ul>
+      <div class="cocktail-content-inner mt-20">
+        <p><%= @cocktail.material %></p>
+      </div>
+    </div>
+  </div>
+</section>

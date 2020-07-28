@@ -12,6 +12,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def show
@@ -20,6 +21,6 @@ class CocktailsController < ApplicationController
 
   private
   def cocktail_params
-    params.require(:cocktail).permit(:cocktail_name, :image, :cocktail_material, :alcohol)
+    params.require(:cocktail).permit(:cocktail_name, :image, :cocktail_material, :alcohol, :user_id)
   end
 end
