@@ -1,10 +1,14 @@
 <section>
   <div class="section page-header my-page">
     <div class="container">
-
+      <br><br><br><br>
       <div class="row">
         <div class="card">
-
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title text-center">新しいカクテルレシピ</h4>
+            </div>
+          </div>
           <div class="card-body">
             <%= form_for(@cocktail, url: cocktails_path) do |f| %>
               <% if @cocktail.errors.any? %>
@@ -30,43 +34,43 @@
               </div>
               <div class="row">
                 <div class="col-md-2 offset-md-4">
-                  <%= f.text_area :cocktail_material, class:"form-control", placeholder:"materials" %>
+                  <%= f.text_field :cocktail_material, class:"form-control", placeholder:"materials" %>
                 </div>
               </div>
 
+              <hr>
+
               <div class="row">
-                <div class="col-md-2 offset-md-4">
+                <div class="col-md-4 offset-md-4">
+                  <h5 class="text-center">Cocktail Image</h5>
                   <%= f.attachment_field :image %>
                 </div>
               </div>
 
-              <div class="col-md-2 offset-md-4">
-                <div class="title"><h3>Alcohol degree</h3></div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" value="option1">strong
-                    <span class="circle"><span class="check"></span></span>
-                  </label>
-                </div>
+              <hr>
 
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" value="option2">normal
-                    <span class="circle"><span class="check"></span></span>
-                  </label>
-                </div>
-
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" value="option3">weak
-                    <span class="circle"><span class="check"></span></span>
-                  </label>
-                </div>
-
+              <div class="row">
+                  <div class="col-md-4 offset-md-4">
+                    <h5 class="text-center">アルコール度数</h5>
+                    <ul class="nav nav-pills nav-pills-rose">
+                      <li class="nav-item"><a class="nav-link" href="#pill1" data-toggle="tab">Strong</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="#pill2" data-toggle="tab">Normal</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#pill3" data-toggle="tab">None</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-5 offset-md-4">
+                    <div class="tab-content tab-space">
+                      STRONG : アルコール度数 10%以上（ex. ショートカクテル）
+                      <br> NORMAL : アルコール度数 5〜10%（ex. ロングカクテル）
+                      <br> NONE : ノンアルコール
+                    </div>
+                  </div>
               </div>
 
               <hr>
-              <%= f.submit "登録", class:"btn btn-md btn-block" %>
+              <div class="row">
+                <%= f.submit "登録", class:"btn btn-md btn-block" %>
+              </div>
             <% end %>
           </div>
         </div>
