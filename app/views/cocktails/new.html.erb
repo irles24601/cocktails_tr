@@ -17,11 +17,6 @@
                   </ul>
                 </div>
               <% end %>
-              <div class="row">
-                <div class="col-md-2 offset-md-4">
-                  <%= f.attachment_field :image %>
-                </div>
-              </div>
               <br>
               <div class="row">
                 <div class="col-md-2 offset-md-4">
@@ -36,6 +31,12 @@
               <div class="row">
                 <div class="col-md-2 offset-md-4">
                   <%= f.text_area :cocktail_material, class:"form-control", placeholder:"materials" %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-2 offset-md-4">
+                  <%= f.attachment_field :image %>
                 </div>
               </div>
 
@@ -65,7 +66,7 @@
               </div>
 
               <hr>
-              <%= f.submit "送信", class:"btn btn-md btn-block" %>
+              <%= f.submit "登録", class:"btn btn-md btn-block" %>
             <% end %>
           </div>
         </div>
