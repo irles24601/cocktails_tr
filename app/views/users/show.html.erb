@@ -12,11 +12,16 @@
             <div class="col-md-6 ml-auto mr-auto">
               <div class="profile">
                 <div class="avatar">
-                    <img src="https://images.unsplash.com/photo-1536936114683-1e27e62e3e9c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1143&q=80" alt="user image" class="img-raised rounded-circle img-fluid img-responsive" width="160" height="160">
+
+                    <%= attachment_image_tag @user, :profile_image, format: 'jpeg', class: "img-raised rounded-circle img-responsive", fallback: "no_image.png", size: "160x160" %>
+
                 </div>
                 <div class="name">
                     <h3 class="title"><%= @user.name %></h3>
                     <h5 class="email"><%= @user.email %></h5>
+                    <% if @user.id == current_user.id %>
+                      <p><%= link_to "edit", edit_user_path(@user), class: "pull-right btn" %></p>
+                    <% end %>
                 </div>
               </div>
             </div>

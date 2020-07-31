@@ -19,6 +19,8 @@
 //= require popper
 //= require bootstrap-sprockets
 
+
+// ローディング画面
 jQuery(function() {
 	var loader = $('.loader-wrap');
 

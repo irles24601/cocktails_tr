@@ -12,7 +12,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
-    @cocktail = Cocktail.find(params[:id])
+    # @cocktail = Cocktail.find(params[:id])
   end
 
   def show
