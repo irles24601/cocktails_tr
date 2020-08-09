@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_08_08_053726) do
 
   create_table "materials", force: :cascade do |t|
     t.integer "cocktail_id"
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

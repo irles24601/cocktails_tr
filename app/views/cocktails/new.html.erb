@@ -1,14 +1,8 @@
 <section>
   <div class="section page-header my-page">
     <div class="container">
-      <br><br><br><br>
       <div class="row">
-        <div class="card">
-          <div class="card-header card-header-text card-header-primary">
-            <div class="card-text">
-              <h4 class="card-title text-center">新しいカクテルレシピ</h4>
-            </div>
-          </div>
+        <div class="card col-8 offset-2">
           <div class="card-body">
             <%= form_for(@cocktail, url: cocktails_path) do |f| %>
               <% if @cocktail.errors.any? %>
@@ -24,12 +18,16 @@
               <br>
               <div class="row">
 
-                <div class="col-md-5">
-                  <h5 class="text-center">Cocktail Image</h5>
-                  <%= f.attachment_field :image %>
+                <div class="image_wrapper offset-1">
+                  <div class="item_image_btn">
+                    <%= f.attachment_field :image, id: "file" %>
+                  </div>
+                  <button id="img_field" type="button" onClick="$('#file').click()" >
+                    <p>クリックして写真を載せる</p>
+                  </button>
                 </div>
 
-                <div class="col-md-2 offset-md-3">
+                <div class="col-md-3 offset-1">
                   <div class="form-group has-icon">
                     <%= f.text_field :cocktail_name, class:"form-control", placeholder:"cocktail name" %>
                     <%= f.text_field :cocktail_material, class:"form-control", placeholder:"materials" %>
@@ -41,7 +39,7 @@
               <hr>
 
               <div class="row">
-                  <div class="col-md-4 offset-md-4">
+                  <div class="col-3 offset-1">
                     <h5 class="text-center">アルコール度数</h5>
                     <ul class="nav nav-pills nav-pills-rose">
                       <li class="nav-item"><a class="nav-link" href="#pill1" data-toggle="tab">Strong</a></li>
@@ -49,8 +47,8 @@
                       <li class="nav-item"><a class="nav-link" href="#pill3" data-toggle="tab">None</a></li>
                     </ul>
                   </div>
-                  <div class="col-md-5 offset-md-4">
-                    <div class="tab-content tab-space">
+                  <div class="col-8">
+                    <div class="font-italic alcohol-text">
                       STRONG : アルコール度数 10%以上（ex. ショートカクテル）
                       <br> NORMAL : アルコール度数 5〜10%（ex. ロングカクテル）
                       <br> NONE : ノンアルコール
