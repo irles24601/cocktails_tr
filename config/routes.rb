@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'materials/create'
   devise_for :users
 
   root 'top#index'
   resources :cocktails, only: [:new, :create, :index, :show] do
-    resources :materials, only: [:create]
+    resources :materials, only: [:new, :create]
   end
   resources :users, only: [:show, :edit, :update]
 

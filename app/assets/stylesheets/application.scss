@@ -449,11 +449,23 @@ section {
   border-radius: 5px;
   width: 200px;
   height: 200px;
-  // text-align: center;
-  // line-height: 200px;
 }
 
 .alcohol-text {
   padding-top: 50px;
   line-height: 45px;
 }
+
+.materials_wrapper {
+  width: 300px;
+}
+.materials_wrapper a {
+  color: silver;
+}
+
+.recipe_heading {
+  border-bottom: thin solid;
+}
+
+
+

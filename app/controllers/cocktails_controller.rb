@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def new
     @cocktail = Cocktail.new
+    @material = Material.find(params[@cocktail.id])
   end
 
   def create

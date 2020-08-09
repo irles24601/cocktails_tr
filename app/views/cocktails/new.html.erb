@@ -29,8 +29,49 @@
 
                 <div class="col-md-3 offset-1">
                   <div class="form-group has-icon">
-                    <%= f.text_field :cocktail_name, class:"form-control", placeholder:"cocktail name" %>
-                    <%= f.text_field :cocktail_material, class:"form-control", placeholder:"materials" %>
+                    <%= f.text_field :cocktail_name, class:"form-control", placeholder:"カクテルの名前" %>
+
+                      <%# <%= form_for(@material, url: cocktail_materials_path) do |g| %>
+                        <%# <%= g.text_field :name, class:"form-control", placeholder:"materials" %>
+                      <%# <% end %>
+
+                      <br>
+
+                      <div class="materials_wrapper">
+                        <a href="" class="js-modal-open" target="_blank">
+                          <h4 class="recipe_heading">材料</h4>
+                          <div class="materials_list">
+                            <div class="material_row row">
+                              <div class="material_name col"><span class="name">ベーススピリッツ</span></div>
+                              <div class="material_amount col">分量</div>
+                            </div>
+                            <div class="material_row row">
+                              <div class="material_name col"><span class="name">副材</span></div>
+                              <div class="material_amount col">分量</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="modal js-modal">
+                          <div class="modal__bg"></div>
+                          <div class="modal__content">
+                            <div class="row">
+                              <h4 class="col text-center">材料</h4>
+                              <h4 class="col text-center">分量</h4>
+                            </div>
+                            <div class="row">
+                              <input type="text" name="name" class="col" value="ジン">
+                              <input type="text" name="amount" class="col" value="30cc">
+                            </div>
+                            <div class="row">
+                              <input type="text" name="name" class="col" value="トニックウォーター">
+                              <input type="text" name="amount" class="col" value="フルアップ">
+                            </div>
+                            <a class="js-modal-close btn" href="">保存して閉じる</a>
+                          </div><!--modal__inner-->
+                      </div><!--modal-->
+
                   </div>
                 </div>
 
@@ -58,7 +99,7 @@
 
               <hr>
               <div class="row">
-                <%= f.submit "登録", class:"btn btn-md btn-block" %>
+                <%= f.submit "レシピを公開する", class:"btn btn-md btn-block" %>
               </div>
             <% end %>
           </div>
